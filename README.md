@@ -12,4 +12,50 @@
 
 
 
+## 不足
+1. 没写注册等功能，数据库建的比较乱（一开始思路比较乱）
+2. 没有用SpringBoot等，主要用Mybatis，因为刚开始写的时候还在学Mybatis，后面学到已经写了不少了，就不魔改了
+3. 代码思路一开始比较乱，因为做的时候还在一边学，之后思路慢慢清晰了
+
+
+mysql：
+
+```mysql
+CREATE DATABASE `face_db`;
+
+USE `face_db`;
+
+CREATE TABLE `user`(
+	`id` INT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` VARCHAR(30) DEFAULT NULL,
+	`pwd` VARCHAR(39) DEFAULT NULL,
+	`show` INT(10) DEFAULT 1
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `data`(
+	`id` INT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`number` VARCHAR(30) DEFAULT NULL,
+	`position` VARCHAR(10) DEFAULT NULL,
+	`name` VARCHAR(30) DEFAULT NULL,
+	`pic` VARCHAR(30) DEFAULT NULL
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `user`(`id`, `name`, `pwd`) VALUES
+(1, 'awei', '123'),
+(2, 'jiege', '123'),
+(3, 'binbin', '123'),
+(4, 'zhangmeiyu', '123'),
+(5, 'jinlun', '123')
+
+INSERT INTO `data`(`id`, `number`, `position`, `name`, `pic`) VALUES
+(1, 'awei', '前端', '阿伟', 'awei.png'),
+(2, 'jiege', '后端', '杰哥', 'jiege.png'),
+(3, 'binbin', '设计', '彬彬', 'binbin.png'),
+(4, 'zhangmeiyu', '生活女工部部长', '张美玉', 'zhangmeiyu.png'),
+(5, 'jinlun', '主播', '金轮', 'jinlun.png')
+
+
+```
+
 
