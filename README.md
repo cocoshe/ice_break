@@ -69,166 +69,62 @@ INSERT INTO `data`(`id`, `number`, `position`, `name`, `pic`) VALUES
 
 ```
 .
-├── face
-│   ├── face.iml
-│   ├── out
-│   │   └── artifacts
-│   │       └── face_war_exploded
-│   │           ├── img
-│   │           │   ├── 1.png
-│   │           │   ├── 2.png
-│   │           │   ├── 3.png
-│   │           │   ├── awei.png
-│   │           │   ├── binbin.png
-│   │           │   ├── fss.png
-│   │           │   ├── fxy.png
-│   │           │   ├── jiege.png
-│   │           │   ├── jinlun.png
-│   │           │   ├── jyp.png
-│   │           │   ├── ljj.png
-│   │           │   ├── swj.png
-│   │           │   ├── zhangmeiyu.png
-│   │           │   └── zmy.png
-│   │           ├── jsp
-│   │           │   ├── choose.jsp
-│   │           │   ├── error.jsp
-│   │           │   ├── index.jsp
-│   │           │   ├── login.jsp
-│   │           │   ├── uploadFile.jsp
-│   │           │   └── welcome.jsp
-│   │           ├── META-INF
-│   │           │   └── MANIFEST.MF
-│   │           └── WEB-INF
-│   │               ├── classes
-│   │               │   ├── com
-│   │               │   │   └── coshe
-│   │               │   │       ├── dao
-│   │               │   │       │   ├── DataMapper.class
-│   │               │   │       │   ├── DataMapper.xml
-│   │               │   │       │   ├── UserMapper.class
-│   │               │   │       │   └── UserMapper.xml
-│   │               │   │       ├── filter
-│   │               │   │       │   ├── CharacterEncodingFilter.class
-│   │               │   │       │   └── LoginFilter.class
-│   │               │   │       ├── pojo
-│   │               │   │       │   ├── Data.class
-│   │               │   │       │   └── User.class
-│   │               │   │       ├── servlet
-│   │               │   │       │   ├── ChangeShowServlet.class
-│   │               │   │       │   ├── InitServlet.class
-│   │               │   │       │   ├── JudgeServlet.class
-│   │               │   │       │   ├── LoginServlet.class
-│   │               │   │       │   ├── LogoutServlet.class
-│   │               │   │       │   ├── StartServlet.class
-│   │               │   │       │   └── UploadFileServlet.class
-│   │               │   │       └── utils
-│   │               │   │           ├── Constants.class
-│   │               │   │           └── MybatisUtils.class
-│   │               │   ├── db.properties
-│   │               │   └── mybatis-config.xml
-│   │               ├── img
-│   │               ├── lib
-│   │               │   ├── commons-fileupload-1.4.jar
-│   │               │   ├── commons-io-2.11.0.jar
-│   │               │   ├── fastjson-1.2.78.jar
-│   │               │   ├── hamcrest-core-1.3.jar
-│   │               │   ├── jsp-api-2.1.jar
-│   │               │   ├── jstl-api-1.2.jar
-│   │               │   ├── junit-4.13.jar
-│   │               │   ├── lombok-1.18.20.jar
-│   │               │   ├── mybatis-3.5.7.jar
-│   │               │   ├── mysql-connector-java-8.0.26.jar
-│   │               │   ├── protobuf-java-3.11.4.jar
-│   │               │   ├── servlet-api-2.5.jar
-│   │               │   └── standard-1.1.2.jar
-│   │               └── web.xml
-│   ├── pom.xml
-│   ├── src
-│   │   ├── main
-│   │   │   ├── java
-│   │   │   │   └── com
-│   │   │   │       └── coshe
-│   │   │   │           ├── dao
-│   │   │   │           │   ├── DataMapper.java
-│   │   │   │           │   ├── DataMapper.xml
-│   │   │   │           │   ├── UserMapper.java
-│   │   │   │           │   └── UserMapper.xml
-│   │   │   │           ├── filter
-│   │   │   │           │   ├── CharacterEncodingFilter.java
-│   │   │   │           │   └── LoginFilter.java
-│   │   │   │           ├── pojo
-│   │   │   │           │   ├── Data.java
-│   │   │   │           │   └── User.java
-│   │   │   │           ├── servlet
-│   │   │   │           │   ├── ChangeShowServlet.java
-│   │   │   │           │   ├── InitServlet.java
-│   │   │   │           │   ├── JudgeServlet.java
-│   │   │   │           │   ├── LoginServlet.java
-│   │   │   │           │   ├── LogoutServlet.java
-│   │   │   │           │   ├── StartServlet.java
-│   │   │   │           │   └── UploadFileServlet.java
-│   │   │   │           └── utils
-│   │   │   │               ├── Constants.java
-│   │   │   │               └── MybatisUtils.java
-│   │   │   └── resources
-│   │   │       ├── db.properties
-│   │   │       └── mybatis-config.xml
-│   │   └── test
-│   │       └── java
-│   │           └── test
-│   │               └── testDemo.java
-│   ├── target
-│   │   ├── classes
-│   │   │   ├── com
-│   │   │   │   └── coshe
-│   │   │   │       ├── dao
-│   │   │   │       │   ├── DataMapper.class
-│   │   │   │       │   ├── DataMapper.xml
-│   │   │   │       │   ├── UserMapper.class
-│   │   │   │       │   └── UserMapper.xml
-│   │   │   │       ├── filter
-│   │   │   │       │   ├── CharacterEncodingFilter.class
-│   │   │   │       │   └── LoginFilter.class
-│   │   │   │       ├── pojo
-│   │   │   │       │   ├── Data.class
-│   │   │   │       │   └── User.class
-│   │   │   │       ├── servlet
-│   │   │   │       │   ├── ChangeShowServlet.class
-│   │   │   │       │   ├── InitServlet.class
-│   │   │   │       │   ├── JudgeServlet.class
-│   │   │   │       │   ├── LoginServlet.class
-│   │   │   │       │   ├── LogoutServlet.class
-│   │   │   │       │   ├── StartServlet.class
-│   │   │   │       │   └── UploadFileServlet.class
-│   │   │   │       └── utils
-│   │   │   │           ├── Constants.class
-│   │   │   │           └── MybatisUtils.class
-│   │   │   ├── db.properties
-│   │   │   └── mybatis-config.xml
-│   │   ├── generated-sources
-│   │   │   └── annotations
-│   │   ├── generated-test-sources
-│   │   │   └── test-annotations
-│   │   └── test-classes
-│   │       └── test
-│   │           └── testDemo.class
-│   └── web
-│       ├── img
-│       │   ├── awei.png
-│       │   ├── binbin.png
-│       │   ├── jiege.png
-│       │   ├── jinlun.png
-│       │   └── zhangmeiyu.png
-│       ├── jsp
-│       │   ├── choose.jsp
-│       │   ├── error.jsp
-│       │   ├── index.jsp
-│       │   ├── login.jsp
-│       │   ├── uploadFile.jsp
-│       │   └── welcome.jsp
-│       └── WEB-INF
-│           └── web.xml
-└── README.md
+├── cocoshe.md
+├── face.iml
+├── pom.xml
+├── README.md
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── coshe
+│   │   │           ├── dao
+│   │   │           │   ├── DataMapper.java
+│   │   │           │   ├── DataMapper.xml
+│   │   │           │   ├── UserMapper.java
+│   │   │           │   └── UserMapper.xml
+│   │   │           ├── filter
+│   │   │           │   ├── CharacterEncodingFilter.java
+│   │   │           │   └── LoginFilter.java
+│   │   │           ├── pojo
+│   │   │           │   ├── Data.java
+│   │   │           │   └── User.java
+│   │   │           ├── servlet
+│   │   │           │   ├── ChangeShowServlet.java
+│   │   │           │   ├── InitServlet.java
+│   │   │           │   ├── JudgeServlet.java
+│   │   │           │   ├── LoginServlet.java
+│   │   │           │   ├── LogoutServlet.java
+│   │   │           │   ├── StartServlet.java
+│   │   │           │   └── UploadFileServlet.java
+│   │   │           └── utils
+│   │   │               ├── Constants.java
+│   │   │               └── MybatisUtils.java
+│   │   └── resources
+│   │       ├── db.properties
+│   │       └── mybatis-config.xml
+│   └── test
+│       └── java
+│           └── test
+│               └── testDemo.java
+└── web
+    ├── img
+    │   ├── awei.png
+    │   ├── binbin.png
+    │   ├── jiege.png
+    │   ├── jinlun.png
+    │   └── zhangmeiyu.png
+    ├── jsp
+    │   ├── choose.jsp
+    │   ├── error.jsp
+    │   ├── index.jsp
+    │   ├── login.jsp
+    │   ├── uploadFile.jsp
+    │   └── welcome.jsp
+    └── WEB-INF
+        └── web.xml
+
+18 directories, 36 files
 
 
 
