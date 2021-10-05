@@ -51,7 +51,8 @@ public class UploadFileServlet extends HttpServlet {
 
         // 中文处理
         upload.setHeaderEncoding("UTF-8");
-        String uploadPath = "/home/coshe/HDU-helper/face/web/img";
+        //String uploadPath = "/home/coshe/HDU-helper/face/web/img";
+        String uploadPath = "/home/coshe/HDU-helper/ice_break/out/artifacts/face_war_exploded/img";
 
 
         // 如果目录不存在则创建
